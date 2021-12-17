@@ -1,0 +1,80 @@
+.Banner-box {
+  position: relative;
+  width: 100%;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border: 2px solid red; */
+  /* padding: 0px 20px; */
+}
+.bannerLeftBox {
+  position: relative;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* height: 70vh; */
+}
+.leftImageBox{
+  width: 100%;
+  height: 60vh;
+
+}
+.leftImage {
+  /* object-fit:cover; */
+  width: 100%;
+  height: 100%;
+}
+.bannerRightBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 40%;
+  height: 70vh;
+}
+.bannerRightLinks {
+  position: relative;
+  width: auto;
+  margin: 20px 0px;
+}
+.bannerRightLinks a {
+  margin: 0px 20px;
+  color: black;
+  text-decoration: none;
+}
+.bannerRightLinks a:hover {
+  cursor: pointer;
+}
+.rightImagesBox {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+.imageBox {
+  width: 35vh;
+  /* height: 30vh; */
+  margin: 10px;
+  overflow: hidden;
+  border-radius:30px ;
+}
+.image {
+  border-radius: 30px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.image:hover{
+  transition: .2s ease-in-out;
+  border-radius: 30px;
+  cursor: pointer;
+  transform: scale(1.2)
+}
