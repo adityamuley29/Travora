@@ -11,16 +11,16 @@ const INIT_Query = {
 function MainContextRight() {
   const [query, setQuery] = useState(INIT_Query);
 
-  const handleChange = (e) => {
-    console.log(e.target.value);
-    const {name, value} = e.target
-    setQuery(prevState => ({...prevState,[name]:value}))
-    console.log(query);
+  const handleChange = (name) => {
+    return ({target:{value}})=>{
+      setQuery(prevQuery => ({...prevQuery,[name]:value}))
+    }
   };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    console.log(query);
   };
   return (
     <div className="MainContextRight">
@@ -62,18 +62,18 @@ function MainContextRight() {
         <form onSubmit={handleSubmit}>
           <div className="FormItem">
             <label>Your Name</label>
-            <input type="text" value={query.name} onChange={handleChange} />
+            <input type="text" value={query.name} onChange={handleChange('name')} />
           </div>
           <div className="FormItem">
             <label>Email</label>
-            <input type="email" value={query.email} onChange={handleChange} />
+            <input type="email" value={query.email} onChange={handleChange('email')} />
           </div>
           <div className="FormItem">
             <label>Contact No.</label>
             <input
               type="number"
               value={query.contactNo}
-              onChange={handleChange}
+              onChange={handleChange('contactNo')}
             />
           </div>
           <div className="FormItem">
@@ -82,19 +82,19 @@ function MainContextRight() {
               rows="4"
               cols="30"
               value={query.message}
-              onChange={handleChange}
+              onChange={handleChange('message')}
             />
           </div>
           <div className="FormItem">
             <label>Date of Travel</label>
-            <input type="date" value={query.date} onChange={handleChange} />
+            <input type="date" value={query.date} onChange={handleChange('date')} />
           </div>
           <div className="FormItem">
             <label>No. of People </label>
             <input
               type="number"
               value={query.noOfPeople}
-              onChange={handleChange}
+              onChange={handleChange('noOfPeople')}
             />
           </div>
           <button type="submit" className="FormBtn">
